@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>blossom's new tab</title>
+        <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+        <style>
+            html{
+                display: flex;
+                font-family: monospace;
+                height: 100%;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                background-color: #232136;
+            }
+            body{
+                display: flex;
+                padding-bottom: 5em;
+            }
+            h1{
+                text-align: center;
+                color: #ea9a97;
+                font-size: 3em;
+            }
+            #h0{
+                text-align: center;
+                width: 100%;
+            }
+            #h0:after{
+                content: "\1F338";
+                display: block;
+                font-size: 10em;
+            }
+            ul{
+                list-style-type: none;
+            }
+            #links{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+            li:first-child{
+                color: #c4a7e7;
+                font-weight: bold;
+                font-size: 1.5em;
+            }
+            li:not(:first-child){
+                font-size: 1.25em;
+            }
+            a{
+                text-decoration: none;
+                color: #908caa;
+            }
+            a:hover{
+                color: #e0def4;
+            }
+            a:hover::before{
+                content: "> ";
+            }
+            #container{
+                background-color: #2a273f;
+                border: solid;
+                border-radius: 1.5em;
+                border-width: 0.5em;
+                border-color: #393552;
+            }
+            #search_form{
+                display: flex;
+                justify-content: center;
+                border-radius: 1em;
+                background-color: #2a273f;
+                margin-bottom: 3em;
+                height: 12.5%;
+            }
+            input, #search_button{
+                font-family: monospace;
+                all: unset;
+                font-size: 1.25em;
+                color: #908caa;
+            }
+            input{
+                width: 95%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="nav">
+            <div id="h0"></div>
+            <h1>blossom's start page</h1>
+            <form type="search" id="search_form">
+                <input placeholder="Google something..." id="search_query">
+                <button id="search_button">></button>
+            </form>
+            <div id="container">
+                <div id="links">
+                    <ul>
+                        <li>Socials</li>
+                        <li><a href="https://youtube.com">Youtube</a></li>
+                        <li><a href="https://facebook.com">Facebook</a></li>
+                        <li><a href="https://twitter.com">Twitter</a></li>
+                        <li><a href="https://elk.zone">Mastodon (Elk)</a></li>
+                        <li><a href="https://rss.dtth.ch">RSS web reader (dtth.ch)</a></li>
+                    </ul>
+                    <ul>
+                        <li>Messaging</li>
+                        <li><a href="https://">Discord</a></li>
+                        <li><a href="https://">Matrix (Cinny)</a></li>
+                    </ul>
+                    <ul>
+                        <li>Learning</li>
+                        <li><a href="https://developer.mozilla.org">Mozilla Developer</a></li>
+                        <li><a href="https://github.com">Github</a></li>
+                    </ul>
+                    <ul>
+                        <li>Cloud</li>
+                        <li><a href="https://aws.amazon.com/">AWS</a></li>
+                        <li><a href="https://cloud.oracle.com/">Oracle Cloud</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            
+        </div>
+        <script>
+            const searchForm = document.getElementById("search_form");
+            const searchQuery = document.getElementById("search_query");
+            const google = "https://google.com/search?q=";
+
+            function onQuerySubmit(event){
+                if(searchQuery.value===""){
+                    return;
+                }
+                event.preventDefault();
+                const url = google + searchQuery.value;
+                console.log(url);
+                window.location.href = url;
+            }
+
+            searchForm.addEventListener('submit', onQuerySubmit);
+            twemoji.parse(document.body);
+        </script>
+    </body>
+</html>
