@@ -125,15 +125,30 @@
             const searchForm = document.getElementById("search_form");
             const searchQuery = document.getElementById("search_query");
             const google = "https://google.com/search?q=";
+            const https = "https://";
 
             function onQuerySubmit(event){
                 if(searchQuery.value===""){
                     return;
                 }
+                var url;
+                try{
+                    url = new URL(searchQuery.value);
+                }
+                catch(error){
+                    try{
+                        url = new URL(https+searchQuery.value);
+                    }
+                    catch(err){
+                        url = google + searchQuery.value;
+                    }
+                    
+                }
+
                 event.preventDefault();
-                const url = google + searchQuery.value;
-                console.log(url);
                 window.location.href = url;
+                console.log(url);
+            
             }
 
             searchForm.addEventListener('submit', onQuerySubmit);
