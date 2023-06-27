@@ -17,7 +17,5 @@ Users can either:
 ### For Firefox
 If using [New Tab Override](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/), remember to <u>**tick**</u> the "<u>**Set focus to the web page instead of the address bar**</u>" checkbox! It's not yet possible to have a clear address bar when loading New Tab Override, and this option will give focus to the page (and therefore the page's search bar) instead. If this is not set, users will have to manually select either the address bar or the page's search bar **every time a new tab is opened**.
 
-[Custom New Tab Page](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/) will automatically clear the address bar, allowing users to type directly into it. This page should work without any issues.
-
 ### For Chromium
 [Custom New Tab URL](https://chrome.google.com/webstore/detail/custom-new-tab-url/mmjbdbjnoablegbkcklggeknkfcjkjia/related) will automatically select the address bar, allowing users to type directly into it.
