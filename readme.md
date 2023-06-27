@@ -7,7 +7,7 @@ Some swatches from the [Rosé Pine theme](https://rosepinetheme.com/)'s Moon var
 
 ## Usage
 
-For (my personal) use with Firefox/Chromium extensions or live wallpaper programs/Windows' Display Properties (pre-Vista) that allow displaying custom URLs/files in new tab pages/desktop wallpapers.
+For (my personal) use with Firefox/Chromium extensions or live wallpaper programs that allow displaying custom URLs/files in new tab pages/desktop wallpapers.
 
 Users can either:
 
